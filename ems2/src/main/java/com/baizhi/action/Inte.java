@@ -16,6 +16,7 @@ public class Inte implements HandlerInterceptor {
         return true;
         }else{
             httpServletResponse.sendRedirect("/ems2/login.jsp");
+	    System.out.printIn("--------");
             return false;
         }
     }
