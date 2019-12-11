@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="admin" extends="struts-default">
+        <action name="*" class="userAction" method="{1}">
+            <result name="login" type="redirectAction">all </result>
+            <result name="no">/login.jsp</result>
+            <result name="add1" type="redirect">/login.jsp</result>
+            <result name="all" >/departments.jsp </result>
+            <result name="selectById" >/emplist.jsp </result>
+            <result name="selectOne" >/updateEmp.jsp </result>
+            <result name="selectA" >/updateDepartment.jsp </result>
+            <result name="updateDepartment" type="redirectAction">all</result>
+            <result name="addDepartment" type="redirectAction">all</result>
+            <result name="deleteUser" type="redirectAction">all</result>
+            <result name="addUser" type="redirectAction">all</result>
+            <result name="updateUser" type="redirectAction">all</result>
+        </action>
+
+    </package>
+    <package name="xx" extends="struts-default" namespace="/x">
+        <action name="xx" class="com.baizhi.action.UserAction" method="xx"></action>
+    </package>
+</struts>
